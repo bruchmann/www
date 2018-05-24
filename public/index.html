@@ -5,43 +5,171 @@
 		<title>Steffen Bruchmann</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<style>
+			@font-face {
+				font-family: Merriweather;
+				font-weight: 300;
+				src: url("fonts/Merriweather-Light.ttf") format("truetype");
+			}
+
+			@font-face {
+				font-family: Merriweather;
+				font-weight: 400;
+				src: url("fonts/Merriweather-Regular.ttf") format("truetype");
+			}
+
+			@font-face {
+				font-family: Merriweather;
+				font-weight: 700;
+				src: url("fonts/Merriweather-Bold.ttf") format("truetype");
+			}
+
 			*,
 			*::before,
 			*::after {
 				box-sizing: border-box;
 			}
+
+			a {
+				color: #1C7ED6;
+			}
+
 			body {
-				font-family: sans-serif;
+				font-family: Merriweather, serif;
+				font-display: fallback;
 				font-size: 1em;
-				line-height: 1.2;
+				line-height: 1.5;
+				margin: 0;
 				color: #212529;
-				background-color: #F8F9FA;
-			}
-
-			.message {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				padding: 1em;
 				background-color: #FFFFFF;
-				box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.25);
 			}
 
-			h1 {
-				font-size: 3em;
+			.page {
+				margin-right: 5.555%;
+				margin-left: 5.555%;
 			}
 
-			p {
-				font-size: 1.5em;
+
+			.page-header {
+				margin: 1.5em 0;
+			}
+
+			.page-title {
+				font-size: 1em;
+				margin: 0;
+			}
+
+			.page-tagline {
+				font-size: 0.75em;
+				margin: 0;
+			}
+
+			.hero {
+				font-size: 1.5rem;
+				font-weight: 300;
+				margin: 0.5em 0;
+				padding: 0.5em 0;
+				border-width: 0.06125rem 0;
+				border-style: solid;
+				border-color: #DEE2E6;
+			}
+
+			.hero p {
+				margin: 0;
+			}
+
+			.hero b {
+				color: #343A40;
+			}
+
+			.page-body > div {
+				position: relative;
+			}
+
+			dl,
+			dt,
+			dd {
+				margin: 0;
+				padding: 0;
+			}
+
+			dt {
+				font-size: 0.75em;
+				font-weight: 700;
+			}
+
+			dd {
+				margin-bottom: 1.5em;
+			}
+
+			ol,
+			li {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			@media screen and (min-width: 60em) {
+				.page {
+					width: 60em;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				.hero {
+					font-size: 3rem;
+				}
+
+				.u-br {
+					white-space: pre;
+				}
+
+				.u-br::before {
+					content: "\A";
+				}
 			}
 		</style>
 	</head>
 	<body>
-		<div class="message">
-			<h1>Hello world</h1>
-			<p>Move along, there is nothing to see here <em>yet</em>.</p>
+
+		<div class="page">
+			<header class="page-header">
+				<h1 class="page-title">sbruchmann</h1>
+				<p class="page-tagline">Doer of stuff. Mostly web stuff.</p>
+			</header>
+
+			<article class="hero">
+				<p class="hero-text">
+					Hi, I'm <b>Steffen Bruchmann</b> and
+					<span class="u-br">I love to craft functional websites.</span>
+				</p>
+			</article>
+
+			<main class="page-body">
+				<dl>
+					<dt>Email</dt>
+					<dd><a href="mailto:hi@sbruchmann.me">hi@sbruchmann.me</a></dd>
+
+					<dt>Mobile</dt>
+					<dd><a href="tel://+4917662424630">+49 176 6242 4630</a></dd>
+
+					<dt>Address</dt>
+					<dd>
+						<ol class="adr">
+							<li>Steffen Bruchmann</li>
+							<li class="street-name">Karl-Liebknecht-Straße 70</li>
+							<li>
+								<span class="postal-code">06803</span>
+								<span class="locality">Bitterfeld-Wolfen</span>
+							</li>
+							<li class="country">Germany</li>
+						</ol>
+					</dd>
+				</dl>
+
+			</main>
 		</div>
+
 	</body>
 </html>
